@@ -1,0 +1,14 @@
+aidl_interface {
+    name: "android.hardware.rpi.led",
+    vendor: true,
+    srcs: ["bcm/hardware/led/*.aidl"],
+    owner: "jason",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+}

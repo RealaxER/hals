@@ -1,0 +1,28 @@
+cc_binary {
+    name: "bcm.hardware.led-service",
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["bcm.hardware.led-service.rc"],
+    vintf_fragments: ["bcm.hardware.led-service.xml"],
+
+    srcs: [
+        "Led.cpp",
+        "service.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libhardware",
+        "libbinder_ndk",
+        "libbinder",
+        "libutils",
+        "android.hardware.rpi.led-V1-ndk",
+        "libgpiod",
+    ],
+}

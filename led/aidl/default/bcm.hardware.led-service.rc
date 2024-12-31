@@ -1,0 +1,5 @@
+service bcm.hardware.led-service /vendor/bin/hw/bcm.hardware.led-service
+    interface aidl bcm.hardware.led.ILed/default
+    class hal
+    user system
+    group system
